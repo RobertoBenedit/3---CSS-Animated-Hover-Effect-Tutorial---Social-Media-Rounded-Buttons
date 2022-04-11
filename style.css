@@ -1,0 +1,139 @@
+:root {
+    --color-one: rgb(50, 143, 136);
+    --color-two: #0fe;
+    --color-three: #fff;
+    --color-button-one:  #3b5998;
+    --color-button-two:  #1da1f2;
+    --color-button-three:  #e1306c;
+    --color-button-four:  #0077b5;
+    --color-button-five:  #ff0000;
+    --color-button-six:  #bd081c;
+    --color-button-seven:  #24292e;
+    --color-button-eight:  #dd4b39;
+    --color-button-nine:  #ff4500;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.button {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.button::before {
+    content: "";
+    left: -50px;
+    top: 50px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-one);
+    border-radius: 50%;
+    transition: 0.15s ease-in;
+}
+i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-two);
+    z-index: 10;
+}
+.button::after {
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-three);
+    border-radius: 50%;
+    transition: 0.25s cubic-bezier(0.14, 1.88, 0.3, 0.76);
+}
+.button:hover::before {
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+}
+.button:hover::after {
+    left: 10px;
+    top: -2px;
+    width: 45px;
+    height: 45px;
+    transition-delay: 0.2s;
+}
+.button:nth-of-type(1)::before {
+    background-color: var(--color-button-one);
+}
+.button:nth-of-type(2)::before {
+    background-color: var(--color-button-two);
+}
+.button:nth-of-type(3)::before {
+    background-color: var(--color-button-three);
+}
+.button:nth-of-type(4)::before {
+    background-color: var(--color-button-four);
+}
+.button:nth-of-type(5)::before {
+    background-color: var(--color-button-five);
+}
+.button:nth-of-type(6)::before {
+    background-color: var(--color-button-six);
+}
+.button:nth-of-type(7)::before {
+    background-color: var(--color-button-seven);
+}
+.button:nth-of-type(8)::before {
+    background-color: var(--color-button-eight);
+}
+.button:nth-of-type(9)::before {
+    background-color: var(--color-button-nine);
+}
+.fa-facebook-f {
+    color: #3b5998;
+}
+.fa-twitter {
+    color: #1da1f2;
+}
+.fa-instagram {
+    color: #e1306c;
+}
+.fa-linkedin-in {
+    color: #0077b5;
+}
+.fa-youtube {
+    color: #ff0000;
+}
+.fa-pinterest-p {
+    color: #bd081c;
+}
+.fa-github {
+    color: #24292e;
+}
+.fa-google-plus-g {
+    color: #dd4b39;
+}
+.fa-reddit-alien {
+    color: #ff4500;
+}
